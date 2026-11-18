@@ -30,7 +30,7 @@ def calcular_area_exata(a, b):
     return F(b) - F(a)
 
 
-def calcular_retangulos(a, b, quantidade, metodo):
+def soma_riemann(a, b, quantidade, metodo):
     largura = (b - a) / quantidade
     retangulos = []
 
@@ -371,7 +371,7 @@ def main():
 
         quantidade = QTD_RETANGULO[indice_quantidade]
         metodo = METODOS[indice_metodo][1]
-        largura, retangulos = calcular_retangulos(a, b, quantidade, metodo)
+        largura, retangulos = soma_riemann(a, b, quantidade, metodo)
 
         if animando:
             tempo_acumulado += dt
